@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu Mono", monospace;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background: #2e1065;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+}
+
+nav h1 {
+    color:#fdf4ff;
+    font-size: 35px;
+}
+
+nav button {
+    padding: 30px 22px;
+    background: #c084fc;
+    border-radius: 50%;
+    border: none;
+    transition: all 0.1s;
+}
+
+nav button .toggle {
+    height: 3px;
+    width: 20px;
+    background-color: #fdf4ff;
+}
+
+nav button .first {
+    transform: rotate(90deg);
+    position: absolute;
+}
+
+.toggle-btn {
+    transform: rotate(45deg);
+}
+
+form {
+    left: 100%;
+    display: none;
+    position: absolute;
+    float: right;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    top: 20%;
+    padding: 50px;
+    background: #2e1065;
+    display: block;
+    box-shadow: 1px 1px 50px #0009;
+}
+
+.left {
+    left: 0%;
+    display: block;
+}
+
+label {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 25px;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.read-checkbtn {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.read-checkbtn p {
+    font-size: 20px;
+    color: #fff;
+}
+
+.read-checkbtn input {
+    height: 50px;
+    width: 50px;
+}
+
+input {
+    background-color: #0009;
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: 900;
+    padding: 10px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    border: none;
+    background: linear-gradient(goldenrod, gold);
+    border-radius: 10px;
+    color: #2e1065;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background: #f5d0fe;
+    border-radius: 10px;
+    border: none;
+    font-weight: 900;
+}
+
+.books .cards {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    gap: 2rem;
+}
+
+.books .cards .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+    background: #0e7490;
+    padding: 20px;
+}
+
+.books .cards .card h1 {
+    margin-bottom: 30px;
+    color: #fdf4ff;
+}
+
+.books .cards .card p {
+    font-size: 25px;
+    color: #fff;
+}
+
+.books .cards .card button {
+    padding: 15px;
+    background: #082f49;
+    color: #fff;
+    margin-top: 20px;
+    border: none;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+@media (max-width: 550px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    form {
+        top: 25%;
+    }
+
+    body h1 {
+        font-size: 30px;
+    }
+
+    .books .cards {
+        padding: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    
+}
